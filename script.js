@@ -1,64 +1,156 @@
-// Declare and Use Variables
+// Array Declaration
 
-var studentName = "Smit Patel";
-let studentAge = "22";
-const isEnrolled = "true";
+console.log(`Array Access`);
 
-console.log(studentName);
-console.log(studentAge);
-console.log(isEnrolled);
+let songs = ['Starboy', 'Uptown Funk', 'Thriller'];
 
-// Demonstrate Data Types
+let artists = ['The Weeeknd', 'Bruno Mars', 'Micheal Jackson']
 
-let greeting = "Hello World";
-console.log(greeting);
+let genres = ['R&B/Pop','Funk', 'Rock'];
 
-let distance = 29.9792458;
-console.log(distance);
-
-let getIphone15 = true;
-let getIphone9 = false;
-
-console.log(getIphone15);
-console.log(getIphone9);
+let favorite = ['']
 
 
-let codes = ["HTML", "CSS", "JS"];
-console.log(codes);
+console.log(songs);
+console.log(artists);
+console.log(genres);
+console.log(favorite);
 
+console.log(` Array Declaration`)
 
-let person = {
-    firstName: "Smit",
-    lastName: "Patel",
-    HumberID: "N01617816",
+// Array Access
+
+function displaySelectedSong(firstSong, middleSong, lastSong){
+
+return ['Starboy', 'Party Monster', 'False Alarm']
+
 };
 
-console.log(person);
+let songList = displaySelectedSong();
+console.log(songList)
 
 
-// Use Basic Operators
+// Array Properties
 
-console.log(1 + 1);
-console.log(2 - 1);
-console.log(2 * 2);
-console.log(10 / 2);
+console.log(`Array Properties`);
 
 
-let a = 20;
-let b = 5;
+function showMusicStats(musicStats){
+    return ['Song Name', 'Artist Name', 'Gengres'];
+};
 
 
-console.log(a < b);
-console.log(a > b);
-console.log(a <= b);
-console.log(a >= b);
-console.log(a != b);
-console.log("20" == a);
-console.log("20" === 3);
+let musicStats = showMusicStats();
+console.log(musicStats.length)
 
-let x = true;
-let y = false;
 
-console.log(x && y);
-console.log(x || y);
-console.log(!x)
+// Adding Items
+
+console.log(`Adding Items`);
+
+const album1 = ["Bad", "Off The Wall", "Thriller"];
+
+album1.push("Dangerous");
+console.log(album1)
+
+const album2 = ['Starboy', 'Party Monster', 'False Alarm'];
+
+console.log(album2.unshift("Reminder"));
+
+console.log(album2)
+
+
+// Removing Items
+
+console.log(`Removing Items`);
+
+const album3 = ["Bad", "Off The Wall", "Thriller", "Dangerous"];
+
+album3.pop(album3.pop());
+
+console.log(album3);
+
+
+const album4 = ['Starboy', 'Party Monster', 'False Alarm', 'Reminder'];
+
+console.log(album4.shift("Reminder"));
+
+console.log(album4)
+
+
+// Array Iteration
+
+console.log(`Array Iteration`);
+
+function displayAllSongForEach(){
+
+const songList = ["Bad", "Off The Wall", "Thriller"];
+songList.forEach((value, index) => {
+    console.log(`${index}: ${value}`);
+});
+
+};
+
+displayAllSongForEach();
+
+createFormattedSongList();
+
+function createFormattedSongList(){
+    const formattedSong = ['Intro', 'Verse', 'Outro']
+    formattedSong.map(Math.sqrt);  
+
+    console.log(formattedSong)
+}
+
+createFormattedSongList();
+
+
+// Array Searching
+
+console.log(`Array Searching`);
+
+function songIndex(){
+
+    const song = ["24K Magic", "Versace on the Floor", "That's What I Like"];
+
+    console.log(song.indexOf("24K Magic"));
+
+    console.log(song.indexOf("Versace on the Floor"));
+
+    console.log(song.indexOf("That's What I Likec"));
+}
+
+songIndex()
+
+function songIncludes(){
+
+
+    const artistSong = ["Starboy", "Save Your Tears", "The Hills"];
+
+    console.log(artistSong.includes("Save Your Tears")); // True Statement
+
+    console.log(artistSong.includes("Uptown Funk")); // False Statement
+
+}
+
+songIncludes();
+
+
+// Array Destructuring
+
+
+console.log(`Array Destructuring`);
+
+function removingSongList(){
+
+    let songList = ["Bad", "Off The Wall", "Thriller"];
+
+    let [firstSong, secondSong] = songList;
+
+    console.log(firstSong)
+    console.log(secondSong);
+
+}
+
+
+removingSongList()
